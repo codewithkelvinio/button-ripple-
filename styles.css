@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: aliceblue;
+    font-family: sans-serif;
+    
+   
+}
+
+.btn {
+    padding: 20px 40px;
+    background-color: palegreen;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+    text-decoration: none;
+    color: black;
+    position: relative;
+    /*   had an issue with an overflow from the ::hover effect. Learned that to hide an absolute positioned element, the container position must be anything except static. It can be relative or fixed.. in addition to absolute. */
+    overflow: hidden;
+}
+
+.btn span {
+    z-index: 1;
+    position: relative;
+}
+
+.btn::before {
+    /*  the ::before selector inserts something before the content of each selected elements*/
+
+    /*  the ::after selector inserts something after the content    */
+    content:"";
+    position: absolute;
+    background-color: orangered;
+    width: 0;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
