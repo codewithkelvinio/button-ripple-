@@ -12,4 +12,4 @@ I learned To hide an absolute positioned element, the container position must be
 Hopefully this tip will be helpful to others. 
 
 Although this is a hobby, I'd like to be employed for my passion eventually. 
-Feel free to reach out to me at my twitter @tobiasrkelvin or IG:codewithkelvin.io
+Feel free to reach out to me at my twitter @tobiasrkelvin or IG:codeByKelvin
